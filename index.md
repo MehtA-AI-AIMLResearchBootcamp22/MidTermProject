@@ -10,7 +10,7 @@ We also tried using just adjectives, pronouns, and determiners as the features a
 Researchers [have found](https://www.nature.com/articles/news030714-13) that women tend to use more pronouns in writing to talk about relationships. Women also use pronouns to establish a relationship with the reader. Men, on the other hand, write more about objects, leading to a higher use in determiners. The pronouns and determiners used in writing could thus distinguish between male and female authors.
 
 ### Punctuation Marks
-[This analysis](https://www.textbroker.co.uk/the-gender-gap-do-men-and-women-write-differently) of men and women writers states that because men tend to write about objects and facts, they write more concise sentences. Similarly, since women tend to establish relationships with the readers, they tend to write longer sentences. This would lead to a different in their uses of punctuation marks.
+[This analysis](https://www.textbroker.co.uk/the-gender-gap-do-men-and-women-write-differently) of men and women writers states that because men tend to write about objects and facts, they write more concise sentences. Similarly, since women tend to establish relationships with the readers, they tend to write longer sentences. This would lead to a different in their uses of punctuation marks. Punctuation had the biggest impact on the accuracy of the model.
 
 ### Words per Sentence
 Since men tend to write more concisely than women, their sentences will be shorter and have fewer words. Therefore, the average number of words per sentence could distinguish between male and female writers.
@@ -32,3 +32,9 @@ We saw in [this](https://dl.acm.org/doi/10.1145/3389189.3397992) research paper 
 80% of our data was used as training data and the remaining 20% was our validation data. The 95% accuracy is on our validation data. 
 
 Our testing data is one book split into multiple documents of 10 sentences each. Our model predicted that around 90% of the documents were written by a woman.
+
+## Conclusion
+We found that the most accurate method is a linear svm model with words per sentence and bag of words on pronouns, determiners, and punctuation as the features. This model without bag of words is not at all accurate, possibly because men and women generally use certain words with different frequencies. If we had more time, we would try using the same features on a KNN model.
+
+## Our Code!
+<script src="https://gist.github.com/ivyg15/58d419bdc4db16e988c41cf04e0b7c11.js"></script>
