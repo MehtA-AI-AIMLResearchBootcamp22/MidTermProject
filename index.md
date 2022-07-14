@@ -15,9 +15,20 @@ Researchers [have found](https://www.nature.com/articles/news030714-13) that wom
 ### Words per Sentence
 Since men tend to write more concisely than women, their sentences will be shorter and have fewer words. Therefore, the average number of words per sentence could distinguish between male and female writers.
 
+### Adjectives
+We initially decided to have adjectives as one of our features. However, we found that excluding this would increase our accuracy, so we dropped it as a feature. This is likely because men and women use adjectives in a similar manner.
+
 ## Preprocessing
-For women's books, we filtered out the words "Finis" and "The end" at the end and the publishing date at the beginning because they don't add anything of value. For the men's books, we removed foot notes at the end and underscores in the middle of the texts. We then split each book into documents of ten sentences each. 
+For women's books, we filtered out the words "Finis" and "The end" at the end because they don't add anything of value. For the men's books, we removed foot notes at the end and underscores in the middle of the texts. For all the books, we removed extremely short sentences. We then split each book into documents of ten sentences each. 
 
 We found that making everything lowercase or lemmatizing the text didn't have any effect on the accuracy, which means that the location the words were used didn't have an impact.
 
 We chose to not remove stopwords because many stopwords are pronouns or determiners, which are our features.
+
+
+## Model
+We saw in [this](https://dl.acm.org/doi/10.1145/3389189.3397992) research paper that an svm model with a linear kernel can achieve quite accurate results, so we initially decided to use an svm model. Later on, we also tested KNN to see whether or not it's more accurate, and found that svm is more accurate. We tried different values of C for our svm model and found that C=0.1 and C=1 achieve similar accuracies of around 95% accurate.
+
+80% of our data was used as training data and the remaining 20% was our validation data. The 95% accuracy is on our validation data. 
+
+Our testing data is one book split into multiple documents of 10 sentences each. Our model predicted that around 90% of the documents were written by a woman.
