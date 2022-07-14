@@ -19,7 +19,7 @@ Since men tend to write more concisely than women, their sentences will be short
 We initially decided to have adjectives as one of our features. However, we found that excluding this would increase our accuracy, so we dropped it as a feature. This is likely because men and women use adjectives in a similar manner.
 
 ## Preprocessing
-For women's books, we filtered out the words "Finis" and "The end" at the end because they don't add anything of value. For the men's books, we removed foot notes at the end and underscores in the middle of the texts. For all the books, we removed extremely short sentences. We then split each book into documents of ten sentences each. 
+For women's books, we filtered out the words "Finis" and "The end" at the end because they don't add anything of value. For the men's books, we removed foot notes at the end and underscores in the middle of the texts. For all the books, we removed extremely long sentences. We then split each book into documents of ten sentences each. 
 
 We found that making everything lowercase or lemmatizing the text didn't have any effect on the accuracy, which means that the location the words were used didn't have an impact.
 
