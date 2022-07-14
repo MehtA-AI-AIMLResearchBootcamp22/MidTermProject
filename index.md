@@ -4,7 +4,7 @@ By Ivy, Kam, William, Alex
 ## Features
 Our features for this model were a bag of words for the pronouns, determiners, and punctuation marks, as well as the average number of words per sentence.
 
-We first tried counting the number of pronouns, determiners, and punctuation marks, but found that the accuracy wasn't as good as it could be. When we included the specific pronouns, determiners, and punctuation that were used, the accuracy increased.
+We also tried using just adjectives, pronouns, and determiners as the features and the result was extremely dissapointing. Using the SVM model, while the accuracy for the validation data was around 72 percent, it was only around 8 for the real testing data. With KNN, the former was about 74 percent and the latter was 17 percent. From this, we concluded that the specific words used by the authors are one of the most significant features.
 
 ### Pronouns and Determiners
 Researchers [have found](https://www.nature.com/articles/news030714-13) that women tend to use more pronouns in writing to talk about relationships. Women also use pronouns to establish a relationship with the reader. Men, on the other hand, write more about objects, leading to a higher use in determiners. The pronouns and determiners used in writing could thus distinguish between male and female authors.
