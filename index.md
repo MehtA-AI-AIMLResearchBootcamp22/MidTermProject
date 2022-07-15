@@ -27,7 +27,7 @@ We chose to not remove stopwords because many stopwords are pronouns or determin
 
 
 ## Model
-We saw in [this](https://dl.acm.org/doi/10.1145/3389189.3397992) research paper that an svm model with a linear kernel can achieve quite accurate results, so we initially decided to use an svm model. Later on, we also tested KNN to see whether or not it's more accurate, and found that svm is more accurate. We tried different values of C for our svm model and found that C=0.1 and C=1 achieve similar accuracies of around 95% accurate.
+We saw in [this](https://dl.acm.org/doi/10.1145/3389189.3397992) research paper that an svm model with a linear kernel can achieve quite accurate results, so we initially decided to use an svm model. Later on, we also wanted tested KNN to see whether or not it's more accurate, but didn't have time to test it on our final features. We tried different values of C for our svm model and found that C=0.1 and C=1 achieve similar accuracies of around 95% accurate.
 
 80% of our data was used as training data and the remaining 20% was our validation data. The 95% accuracy is on our validation data. 
 
